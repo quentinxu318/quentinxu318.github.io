@@ -10,10 +10,10 @@ import Socials from "@components/Socials.astro";
 import getSortedPosts from "@utils/getSortedPosts";
 import { SOCIALS } from "@config";
 
-const posts = await getCollection("blog");
+// const posts = await getCollection("blog");
 
-const sortedPosts = getSortedPosts(posts);
-const featuredPosts = sortedPosts.filter(({ data }) => data.featured);
+// const sortedPosts = getSortedPosts(posts);
+// const featuredPosts = sortedPosts.filter(({ data }) => data.featured);
 
 const socialCount = SOCIALS.filter(social => social.active).length;
 ---
@@ -22,7 +22,7 @@ const socialCount = SOCIALS.filter(social => social.active).length;
   <Header />
   <main id="main-content">
     <section id="hero">
-      <h1>Mingalaba</h1>
+      <!-- <h1>Welcome to my page</h1>
       <a
         target="_blank"
         href="/rss.xml"
@@ -38,24 +38,16 @@ const socialCount = SOCIALS.filter(social => social.active).length;
           ></path><circle cx="6" cy="18" r="2"></circle>
         </svg>
         <span class="sr-only">RSS Feed</span>
-      </a>
+      </a> -->
 
-      <p>
-        AstroPaper is a minimal, responsive, accessible and SEO-friendly Astro
-        blog theme. This theme follows best practices and provides accessibility
-        out of the box. Light and dark mode are supported by default. Moreover,
-        additional color schemes can also be configured.
-      </p>
-      <p>
-        Read the blog posts or check
-        <LinkButton
-          className="underline decoration-dashed underline-offset-4 hover:text-skin-accent"
-          href="https://github.com/satnaing/astro-paper#readme"
-        >
-          README
-        </LinkButton> for more info.
-      </p>
+      <div class="text-base text-orange-700 mb-4 text-center">
+        <h1 class="text-2xl font-bold mb-4">Looking for jobs !</h1>
+      </div>   
+
+
+      Let's connect! You can find my resume or reach out with the links below.
       {
+        
         // only display if at least one social link is enabled
         socialCount > 0 && (
           <div class="social-wrapper">
@@ -64,10 +56,37 @@ const socialCount = SOCIALS.filter(social => social.active).length;
           </div>
         )
       }
-    </section>
+      <br>
+      <Hr />
+      <br>
+      <div>
+        <h2 class="text-2xl font-bold mb-4">About Me</h2>
+        <p class="text-base text-black-700 mb-4 text-justify">Hi, I'm <span class="text-orange-600">Quentin</span>. I'm finalizing my dual degree in AI at Tsinghua University & Telecom SudParis, specializing in Machine Learning and Deep Learning challenges, particularly in Large Language Models and Autonomous Agents.
+      <br>
+      <br>
+        <h2 class="text-2xl font-bold mb-4">What I Look For</h2>
+        <p class="text-base text-black-700 mb-4 text-justify">
+          With a blend of engineering (@Telecom SudParis) and research skills (@Tsinghua University), I'm looking for <span class="text-orange-600">full-time or internship opportunities</span> in AI, open to applied, research, or hybrid roles in <span class="text-orange-600">Europe, preferably France</span>.
+          I aim to contribute to innovative projects where I can apply my AI expertise. Eager to join a team that values innovation and technical challenges, I'm ready to leverage my diverse professional experience and R&D contributions to build impactful products and solutions.</p>
+
+      <br>
+        <h2 class="text-2xl font-bold mb-4">Availability</h2>
+        <p class="text-base text-black-700 text-justify">Ready to start from <span class="text-orange-600">Summer 2024</span> following the completion of my degree.</p>
+      </div>
+    <br>
+    
+      <!-- <p>
+        Read the blog posts or check
+        <LinkButton
+          className="underline decoration-dashed underline-offset-4 hover:text-skin-accent"
+          href="https://github.com/satnaing/astro-paper#readme"
+        >
+          README
+        </LinkButton> for more info.
+      </p> -->
 
     <Hr />
-
+<!-- 
     {
       featuredPosts.length > 0 && (
         <>
@@ -117,7 +136,7 @@ const socialCount = SOCIALS.filter(social => social.active).length;
         </LinkButton>
       </div>
     </section>
-  </main>
+  </main> -->
 
   <Footer />
 </Layout>
