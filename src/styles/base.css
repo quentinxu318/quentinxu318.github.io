@@ -20,6 +20,14 @@
     --color-card-muted: 138, 51, 2;
     --color-border: 171, 75, 8;
   }
+  #theme-btn {
+    border-radius: 50%;
+    padding: 8px;
+    transition: transform 0.2s;
+  }
+  #theme-btn:hover {
+    transform: rotate(20deg);
+  }
   #sun-svg,
   html[data-theme="dark"] #moon-svg {
     display: none;
@@ -34,7 +42,7 @@
   }
   section,
   footer {
-    @apply mx-auto max-w-3xl px-4;
+    @apply mx-auto max-w-4xl px-4;
   }
   a {
     @apply outline-2 outline-offset-1 outline-skin-fill 
@@ -132,4 +140,23 @@
   .focus-outline {
     @apply outline-2 outline-offset-1 outline-skin-fill focus-visible:no-underline focus-visible:outline-dashed;
   }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 1s ease-in-out;
+}
+
+.cta-button {
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 8px;
+  background: linear-gradient(90deg, #ff7e5f, #feb47b);
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
 }

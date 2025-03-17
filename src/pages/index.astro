@@ -22,59 +22,73 @@ const socialCount = SOCIALS.filter(social => social.active).length;
   <Header />
   <main id="main-content">
     <section id="hero">
-      <!-- <h1>Welcome to my page</h1>
-      <a
-        target="_blank"
-        href="/rss.xml"
-        class="rss-link"
-        aria-label="rss feed"
-        title="RSS Feed"
-      >
-        <svg xmlns="http://www.w3.org/2000/svg" class="rss-icon"
-          ><path
-            d="M19 20.001C19 11.729 12.271 5 4 5v2c7.168 0 13 5.832 13 13.001h2z"
-          ></path><path
-            d="M12 20.001h2C14 14.486 9.514 10 4 10v2c4.411 0 8 3.589 8 8.001z"
-          ></path><circle cx="6" cy="18" r="2"></circle>
-        </svg>
-        <span class="sr-only">RSS Feed</span>
-      </a> -->
 
-      <div class="text-base text-orange-700 mb-4 text-center">
-        <h1 class="text-2xl font-bold mb-4">Looking for jobs !</h1>
-      </div>   
+      <div class="text-base text-orange-700 mb-4 text-center animate-fadeIn">
+        <h1 class="text-2xl font-bold mb-4">Open to Opportunities !</h1>
+      </div>  
 
-
-      Let's connect! You can find my resume or reach out with the links below.
-      {
-        
-        // only display if at least one social link is enabled
-        socialCount > 0 && (
-          <div class="social-wrapper">
-            <div class="social-links">Social Links:</div>
-            <Socials />
+      <div class="mt-4 text-center">
+        Let's connect! Find my resume and reach out with the links below:
+        {socialCount > 0 && (
+          <div class="mt-4 text-center">
+        <Socials />
           </div>
-        )
-      }
+        )}
+      </div>
+      
       <br>
       <Hr />
-      <br>
-      <div>
-        <h2 class="text-2xl font-bold mb-4">About Me</h2>
-        <p class="text-base text-black-700 mb-4 text-justify">Hi, I'm <span class="text-orange-600">Quentin</span>. I'm finalizing my dual degree in AI at Tsinghua University & Telecom SudParis, specializing in Machine Learning and Deep Learning challenges, particularly in Large Language Models and Autonomous Agents.
-      <br>
-      <br>
-        <h2 class="text-2xl font-bold mb-4">What I Look For</h2>
-        <p class="text-base text-black-700 mb-4 text-justify">
-          With a blend of engineering (@Telecom SudParis) and research skills (@Tsinghua University), I'm looking for <span class="text-orange-600">full-time or internship opportunities</span> in AI, open to applied, research, or hybrid roles in <span class="text-orange-600">Europe, preferably France</span>.
-          I aim to contribute to innovative projects where I can apply my AI expertise. Eager to join a team that values innovation and technical challenges, I'm ready to leverage my diverse professional experience and R&D contributions to build impactful products and solutions.</p>
 
-      <br>
-        <h2 class="text-2xl font-bold mb-4">Availability</h2>
-        <p class="text-base text-black-700 text-justify">Ready to start from <span class="text-orange-600">Summer 2024</span> following the completion of my degree.</p>
-      </div>
-    <br>
+      <section id="about" class="mt-8">
+        <h2 class="text-2xl font-semibold mb-4">About Me</h2>
+        <p class="text-black-700 text-justify leading-relaxed">
+            Hey there! I'm <span class="text-orange-600 font-medium">Quentin</span>, an AI enthusiast with a passion for pushing the boundaries of Machine Learning and Deep Learning. With a dual MSc in AI from <span class="font-bold">Tsinghua University</span> & <span class="font-bold">Telecom SudParis</span>, I thrive at the intersection of research and real-world applications. My work spans cutting-edge areas like Large Language Models, Autonomous Agents, and AI safety, combining technical depth with hands-on innovation. Whether it's building intelligent systems, optimizing AI models, or crafting impactful solutions, I'm all about leveraging AI to make a difference.
+        </p>
+    </section>
     
+    <section id="goals" class="mt-8">
+        <h2 class="text-2xl font-semibold mb-4">What I'm Looking For</h2>
+        <p class="text-black-700 text-justify leading-relaxed">
+            With a strong foundation in AI research and engineering, I'm actively seeking <span class="text-orange-600">full-time opportunities</span> in AI, spanning <span class="text-orange-600">applied</span>, <span class="text-orange-600">research</span>, or <span class="text-orange-600">hybrid</span> roles. Ideally, I'm looking to contribute in <span class="text-orange-600">Europe</span>, especially <span class="text-orange-600">France</span>, where I can collaborate with forward-thinking teams on groundbreaking AI projects. I thrive in dynamic environments that embrace innovation and technical challenges, and I’m eager to apply my expertise to build intelligent, scalable, and impactful AI-driven solutions. If you’re working on something exciting in AI, let’s connect and create something amazing together!
+        </p>
+    </section>
+    
+
+      <section id="availability" class="mt-8">
+        <h2 class="text-2xl font-semibold mb-4">Availability</h2>
+        <p class="text-black-700">Ready to start <span class="text-orange-600 font-medium">ASAP</span> following the completion of my internhip @Apple.</p>
+      </section>
+      
+      <br>
+      <Hr />
+
+      <section id="publications" class="mt-8">
+        <h2 class="text-2xl font-semibold mb-6">Publications</h2>
+        <ul class="space-y-6">
+          <li class="p-4 rounded-2xl bg-gray-400 shadow-sm bg-opacity-30">
+        <a href="https://arxiv.org/abs/2405.19026" class="text-lg font-medium text-black-600 hover:text-orange-600">DiveR-CT: Diversity-enhanced Red Teaming Large Language Model Assistants with Relaxing Constraints</a>
+        <span class="text-sm text-black-800 block mt-2"><i>Andrew Zhao, <span class="text-orange-600 font-medium">Quentin Xu</span>, Matthieu Lin, Shenzhi Wang, Yong-jin Liu, Zilong Zheng, Gao Huang</i></span>
+        <span class="text-sm text-black-700 block mt-2"><i>Thirty-Ninth AAAI Conference on Artificial Intelligence (AAAI 2025) (<span class="text-orange-600 font-medium">Oral</span>)</i></span>
+        <div class="flex justify-center space-x-4 mt-4 text-sm">
+          <a href="https://arxiv.org/abs/2405.19026" class="text-black-600 hover:text-orange-600">Paper 📄</a>
+          <a href="https://github.com/LeapLabTHU/diver-ct" class="text-black-600 hover:text-orange-600">Code 💻</a>
+        </div>
+          </li>
+          <li class="p-4 rounded-2xl bg-gray-400 shadow-sm bg-opacity-30">
+        <a href="https://arxiv.org/abs/2308.10144" class="text-lg font-medium hover:text-orange-600">ExpeL: LLM Agents Are Experiential Learners</a>
+        <span class="text-sm text-black-700 block mt-2"><i>Andrew Zhao, Daniel Huang, <span class="text-orange-600 font-medium">Quentin Xu</span>, Matthieu Lin, Yong-Jin Liu, Gao Huang</i></span>
+        <span class="text-sm text-black-700 block mt-2"><i>Thirty-Eigth AAAI Conference on Artificial Intelligence (AAAI 2024) (<span class="text-orange-600 font-medium">Oral</span>)</i></span>
+        <div class="flex justify-center space-x-4 mt-4 text-sm">
+          <a href="https://arxiv.org/abs/2308.10144" class="text-black-600 hover:text-orange-600">Paper 📄</a>
+          <a href="https://github.com/LeapLabTHU/ExpeL" class="text-black-600 hover:text-orange-600">Code 💻</a>
+        </div>
+          </li>
+        </ul>
+      </section>
+      
+    
+    
+
       <!-- <p>
         Read the blog posts or check
         <LinkButton
@@ -84,6 +98,8 @@ const socialCount = SOCIALS.filter(social => social.active).length;
           README
         </LinkButton> for more info.
       </p> -->
+    <br>
+    <br>
 
     <Hr />
 <!-- 
@@ -177,4 +193,6 @@ const socialCount = SOCIALS.filter(social => social.active).length;
   .all-posts-btn-wrapper {
     @apply my-8 text-center;
   }
+
+  
 </style>
