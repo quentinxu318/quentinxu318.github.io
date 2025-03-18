@@ -160,3 +160,47 @@
   font-weight: bold;
   text-decoration: none;
 }
+
+#dynamic-text {
+  display: inline-block;
+  min-width: 1ch; /* This keeps a space for the cursor even when empty */
+}
+.cursor {
+  display: inline-block;
+  width: 2px;
+  height: 1.3em;
+  color: orange;
+  animation: blink 0.7s steps(1) infinite;
+  vertical-align: -0.2em;
+}
+
+.logo {
+  display: flex;
+  align-items: baseline; /* <— ensures they sit on the same line */
+  gap: 0.5rem;
+}
+
+.logo .static-title {
+  font-weight: 700;
+  font-size: 1.5rem;
+  line-height: 1;
+}
+
+.logo .dynamic-title {
+  font-weight: 500;
+  font-size: 1.3rem;
+  line-height: 1; /* <— force same line-height */
+  margin-left: 20px;
+  display: flex;
+  align-items: baseline;
+  letter-spacing: 0.5px;
+}
+
+@keyframes blink {
+  0%, 50% {
+    opacity: 1;
+  }
+  51%, 100% {
+    opacity: 0;
+  }
+}
