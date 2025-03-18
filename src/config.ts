@@ -26,7 +26,7 @@ export const SOCIALS: SocialObjects = [
   {
     name: "Github",
     href: "https://github.com/Qwentxz",
-    linkTitle: ` ${SITE.title} on Github`,
+    linkTitle: `${SITE.title} on Github`,
     active: false,
   },
   {
@@ -106,6 +106,12 @@ export const SOCIALS: SocialObjects = [
     href: "https://github.com/satnaing/astro-paper",
     linkTitle: `${SITE.title} on Discord`,
     active: false,
+  },
+  {
+    name: "GoogleScholar",
+    href: "https://scholar.google.com/citations?user=cmAvcCEAAAAJ&hl=en",
+    linkTitle: `${SITE.title} on Google Scholar`,
+    active: true,
   },
   {
     name: "GitLab",
